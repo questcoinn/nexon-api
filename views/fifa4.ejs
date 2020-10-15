@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA ONLINE 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/fifa4.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/loader.css">
+    <link rel="shortcut icon" href="/images/icons/fifa4.ico">
+    <script src="/scripts/fifa4_main.js" type="module" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+            <form class="search-form">
+                <input type="text" id="input-nickname" class="input-nickname" placeholder="nickname">
+                <input type="submit" id="submit-btn" class="submit-btn" value="Search">
+            </form>
+        </section>
+        <section id="result">
+            <div class="user-info">
+                <h2>
+                    <span id="user-nickname"></span>
+                    <span id="user-level"></span>
+                </h2>
+            </div>
+            <div class="max-divisions">
+                <div class="max-division">
+                    <h3>
+                        <span id="official-div-label"></span>
+                        <span class="max-division-value" id="official-div-value"></span>
+                    </h3>
+                    <i id="official-div-date"></i>
+                </div>
+                <div class="max-division">
+                    <h3>
+                        <span id="director-div-label"></span>
+                        <span class="max-division-value" id="director-div-value"></span>
+                    </h3>
+                    <i id="director-div-date"></i>
+                </div>
+            </div>
+            <button class="folding-matches-btn" id="folding-matches-btn" disabled>
+                최근경기접기
+            </button>
+            <div class="recent-matches" id="recent-matches">
+                <h3 id="official-matches-label"></h3>
+                <div class="matches-wrapper official-matches" id="official-matches"></div>
+                <h3 id="director-matches-label"></h3>
+                <div class="matches-wrapper director-matches" id="director-matches"></div>
+            </div>
+            <div class="recent-trades">
+                <h3 id="recent-buys-label"></h3>
+                <div class="recent-buys" id="recent-buys"></div>
+                <h3 id="recent-sells-label"></h3>
+                <div class="recent-sells" id="recent-sells"></div>
+            </div>
+        </section>
+    </main>
+    <aside class="match-info">
+        <!-- <section class="match-detail">
+            <label>시즌 ID</label>
+            <div id="seasonId"></div>
+            <label>결과 + 종료타입</label>
+            <div id="matchResult"></div>
+            <label>게임 일시정지 수</label>
+            <div id="systemPause"></div>
+            <label>파울</label>
+            <div id="foul"></div>
+            <label>부상</label>
+            <div id="injury"></div>
+            <label>레드카드</label>
+            <div id="redCards"></div>
+            <label>옐로카드</label>
+            <div id="yellowCards"></div>
+            <label>드리블거리</label>
+            <div id="dribble"></div>
+            <label>코너킥</label>
+            <div id="cornerKick"></div>
+            <label>오프사이드</label>
+            <div id="possession"></div>
+            <label>평점</label>
+            <div id="averageRating"></div>
+            <label>컨트롤러</label>
+            <div id="controller"></div>
+            <label>점유율</label>
+            <div id="possession"></div>
+        </section>
+        <section class="match-shoot">
+            <div id="shootTotal"></div>
+            <div id="effectiveShootTotal"></div>
+            <div id="shootOutScore"></div>
+            <div id="goalTotal"></div>
+            <div id="goalTotalDisplay"></div>
+            <div id="ownGoal"></div>
+            <div id="shootHeading"></div>
+            <div id="goalHeading"></div>
+            <div id="shootFreekick"></div>
+            <div id="goalFreekick"></div>
+            <div id="shootInPenalty"></div>
+            <div id="goalInPenalty"></div>
+            <div id="shootOutPenalty"></div>
+            <div id="goalOutPenalty"></div>
+            <div id="shootPenaltyKick"></div>
+            <div id="goalPenaltyKick"></div>
+
+            <canvas id="goal-image"></canvas>
+            <div class="shoot-details">
+                <div class="shoot-detail">
+                    <div id="goalTime"></div>
+                    <div id="type"></div>
+                    <div id="result"></div>
+                    <div id="spId"></div>
+                    <div id="spGrade"></div>
+                    <div id="spLevel"></div>
+                    <div id="spIdType"></div>
+                    <div id="assist"></div>
+                    <div id="assistSpId"></div>
+                </div>
+            </div>
+        </section>
+        <section class="match-pass">
+            <div id="passTry"></div>
+            <div id="passSuccess"></div>
+            <div id="shortPassTry"></div>
+            <div id="shortPassSuccess"></div>
+            <div id="longPassTry"></div>
+            <div id="longPassSuccess"></div>
+            <div id="bouncingLobPassTry"></div>
+            <div id="bouncingLobPassSuccess"></div>
+            <div id="drivenGroundPassTry"></div>
+            <div id="drivenGroundPassSuccess"></div>
+            <div id="throughPassTry"></div>
+            <div id="throughPassSuccess"></div>
+            <div id="lobbedThroughPassTry"></div>
+            <div id="lobbedThroughPassSuccess"></div>
+        </section>
+        <section class="match-defence">
+            <div id="blockTry"></div>
+            <div id="blockSuccess"></div>
+            <div id="tackleTry"></div>
+            <div id="tackleSuccess"></div>
+        </section>
+        <section class="match-players">
+            <div class="match-player">
+                <div id="spid"></div>
+                <div id="spPosition"></div>
+                <div id="spGrade"></div>
+            </div>
+        </section> -->
+    </aside>
+    <%- include('./components/footer'); %>
+</body>
+</html>

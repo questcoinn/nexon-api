@@ -1,0 +1,20 @@
+{
+  "name": "nexon-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon ./server.js"
+  },
+  "author": "questcoinn",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "got": "^11.7.0"
+  }
+}

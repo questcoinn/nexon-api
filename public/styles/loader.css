@@ -1,0 +1,50 @@
+.loader {
+    --size-origin: 2vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.loader span {
+    position: absolute;
+    transform-origin: 0 -20vh;
+    transform: translateY(20vh) rotate(calc(360deg / var(--stage, 12) * var(--i)));
+}
+
+.loader span::before {
+    content: '';
+    position: absolute;
+    width: calc(var(--size-origin) * 1.5);
+    height: calc(var(--size-origin) * 1.5);
+    border-radius: 50%;
+    background-color: #96fffd;
+    box-shadow:
+        0 0 var(--size-origin) #96fffd,
+        0 0 calc(var(--size-origin) * 2) #96fffd,
+        0 0 calc(var(--size-origin) * 4) #96fffd,
+        0 0 calc(var(--size-origin) * 6) #96fffd,
+        0 0 calc(var(--size-origin) * 8) #96fffd,
+        0 0 calc(var(--size-origin) * 10) #96fffd;
+    transform: scale(0);
+    animation: repeatLoad 1s linear infinite;
+    animation-delay: calc(1s / var(--stage, 12) * var(--i));
+}
+
+@keyframes repeatLoad {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: scale(1);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+        transform: scale(0);
+    }
+}

@@ -1,0 +1,195 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: clamp(800px, 60%, 100vw);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+main section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form,
+.user-info,
+.max-divisions,
+.recent-matches,
+.folding-matches-btn,
+.recent-trades {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    width: 100%;
+}
+
+.search-form {
+    margin-top: 0;
+    padding: .3rem .6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-nickname,
+.submit-btn {
+    font-size: 1.5rem;
+}
+
+.input-nickname {
+    border: none;
+    width: 75%;
+}
+
+.submit-btn {
+    width: 20%;
+    border: none;
+    background-color: white;
+    cursor: pointer; 
+}
+
+.user-info {
+    border-radius: .5em;
+    text-align: center;
+}
+
+.max-division {
+    margin-top: 1rem;
+}
+
+.max-division:first-child {
+    margin-top: 0;
+}
+
+.max-division-value,
+.max-division i {
+    font-size: .9em;
+}
+
+.recent-matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: unset;
+}
+
+.recent-matches.folded {
+    display: none;
+}
+
+.recent-matches h3 {
+    margin: 1em 0;
+}
+
+.matches-wrapper {
+    width: 100%;
+}
+
+.matches-wrapper table {
+    margin-top: 1rem;
+    border: 2px solid #edf3ff;
+    width: 100%;
+}
+
+.matches-wrapper table:first-child {
+    margin-top: 0;
+}
+
+.official-matches tr:nth-child(2n + 1) {
+    background-color: #edf3ff;
+}
+
+.director-matches tr:nth-child(2n + 1) {
+    background-color: #ffe7ef;
+}
+
+.matches-wrapper tr:nth-child(2n) {
+    background-color: white;
+}
+
+.matches-wrapper td {
+    padding: .5em 1em;
+}
+
+.matches-wrapper td:first-child {
+    font-weight: bold;
+}
+
+.folding-matches-btn {
+    border: none;
+    letter-spacing: .4em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: #1657e7;
+    border-radius: .5em;
+}
+
+.folding-matches-btn:disabled {
+    background-color: #aec1ec;
+    cursor: not-allowed;
+}
+
+.recent-trades h3 {
+    margin: 1em 0;
+}
+
+.card-grade,
+.recent-trades i {
+    font-size: .8em;
+}
+
+.recent-buys,
+.recent-sells {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    text-align: center;
+}
+
+.recent-buy,
+.recent-sell {
+    box-shadow: 0 0 .5em #e4e4e4;
+    border-radius: .5em;
+    padding: 1em;
+}
+
+.recent-buy img,
+.recent-sell img {
+    width: 100%;
+}
+
+.match-info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+}

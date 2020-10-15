@@ -1,0 +1,40 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 4rem;
+}
+
+h1, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: var(--header-height);
+    padding: .5rem 1rem;
+}
+
+main {
+    padding: .5rem 1rem;
+    min-height: calc(100vh - var(--header-height) - 3rem);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list a {
+    height: 6rem;
+    margin: 10px;
+}
+
+.list img {
+    height: 100%;
+    box-shadow: 0 0 10px #e0e0e0;
+}
