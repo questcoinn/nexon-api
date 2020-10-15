@@ -19,7 +19,7 @@ $ npm start
 ## TODOS
 
 - FIFA ONLINE 4
-    - Detailed math information
+    - Detailed match information
 - KARTRIDERS
 - D&F
 - CYPHERS
